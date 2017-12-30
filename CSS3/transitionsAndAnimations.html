@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transitions & Animations</title>
+    <style>
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            transition: width 1s, height 2s;
+            transition-delay: 0.5s;
+            transition-timing-function: easy-in-out;
+        }
+
+        #box1:hover {
+            width: 500px;
+            height: 500px;
+        }
+
+        #box2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: colorChange;
+            animation-duration: 5s;
+            animation-iteration-count: 3;
+            animation-direction: reverse;
+            position: relative;
+        }
+
+        /*@keyframes colorChange {
+            from {background-color: red}
+            to {background-color: blue}
+        }*/
+
+        @keyframes colorChange {
+            0% {background-color: red; left:0px; top:0px}
+            25% {background-color: yellow; left:200px; top:0px}
+            50% {background-color: green; left:200px; top:200px}
+            75% {background-color: blue; left:0px; top:200px}
+            100% {background-color: red; left:0px; top:0px}
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="box1"></div>
+    <br>
+    <div id="box2"></div>
+
+</body>
+</html>

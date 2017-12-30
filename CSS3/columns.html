@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Columns</title>
+    <style>
+        article {
+            column-count:3;
+            column-gap: 30px;
+            /*column-rule-style: solid;
+            column-rule-width: 2px;
+            column-rule-color: green;*/
+            column-rule: 2px solid red;
+        }
+        article h1{
+            column-span: all;
+        }
+        .textbox1 {
+            border: 2px solid;
+            padding: 20px;
+            width: 300px;
+            overflow: auto;
+            resize: both;
+        }
+        .textbox2 {
+            margin: 20px;
+            padding: 10px;
+            width: 300px;
+            height: 100px;
+            border: 1px solid black;
+            outline: 1px solid red;
+            outline-offset: 10px;
+        }
+
+        .flex-container {
+            width: 400px;
+            height: 250px;
+            background-color: black;
+            display: flex;
+            /*flex-direction: column;*/
+            justify-content: space-around;
+        }
+
+        .flex-item {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin:10px;
+        }
+
+        .first {
+            order:-1;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>Article Title</h1>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel lacus sed quam tempor elementum id sed est. Donec placerat pellentesque libero eget semper. Aenean diam ante, ullamcorper vel lectus quis, pellentesque iaculis metus. Donec ullamcorper bibendum metus quis consequat. Suspendisse ultricies lectus non placerat suscipit. Quisque facilisis leo in sem vestibulum lacinia. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam non nulla vitae nunc consectetur faucibus elementum eget nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis maximus sagittis. Nam mattis, nisi eu finibus accumsan, est eros auctor metus, vel hendrerit massa erat id dolor. Fusce tristique dolor et erat sollicitudin pretium. Aliquam ac eleifend leo, eu ullamcorper lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec porta, lectus et fermentum placerat, purus quam venenatis nisl, consectetur posuere nulla est quis massa.
+    </article>
+    <br>
+    <div class="textbox1">Try and resize this element</div>
+    <div class="textbox2">This element has 10px outline</div>
+
+    <div class="flex-container">
+        <div class="flex-item">Flex item 1</div>
+        <div class="flex-item first">Flex item 2</div>
+        <div class="flex-item">Flex item 3</div>
+    </div>
+</body>
+</html>
